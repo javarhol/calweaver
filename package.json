@@ -1,0 +1,13 @@
+{
+  "name": "calweaver",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev ./public",
+    "schema:apply": "wrangler d1 execute CalWeaverDB --file=./schema.sql"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,15 @@
+name = "calweaver"
+compatibility_date = "2024-09-17"
+pages_build_output_dir = "public"
+
+[vars]
+OPENAI_API_BASE = "https://api.openai.com/v1"
+DEFAULT_MODEL = "gpt-4o-mini"
+
+[[d1_databases]]
+binding = "CalWeaverDB"
+database_name = "CalWeaverDB"
+database_id = "825051f6-b7b9-4b73-80dc-3cc89f8c91c6"
+
+[observability]
+enabled = true
