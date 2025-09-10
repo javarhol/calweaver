@@ -1,57 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>CalWeaver</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/styles.css" />
-</head>
-<body>
-  <header>
-    <h1>CalWeaver</h1>
-    <p>AI-assisted auto-scheduler (Google Tasks → Google Calendar)</p>
-  </header>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <title>CalWeaver</title> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="stylesheet" href="/styles.css" /> </head> <body> <header> <h1>CalWeaver</h1> <p>AI-assisted auto-scheduler (Google Tasks → Google Calendar)</p> </header>
 
-  <main>
-    <section id="auth">
-      <button id="connect-google">Connect Google</button>
-      <div id="me"></div>
-    </section>
+<main> <section id="auth"> <button id="connect-google">Connect Google</button> <div id="me"></div> </section>
 
-    <section id="byok" class="card">
-      <h2>OpenAI Key (encrypted)</h2>
-      <input type="password" id="openai-key" placeholder="sk-..." />
-      <button id="save-key">Save</button>
-      <button id="clear-key" class="secondary">Clear</button>
-      <p id="byok-status"></p>
-    </section>
+<section id="byok" class="card">
+  <h2>OpenAI Key (encrypted)</h2>
+  <input type="password" id="openai-key" placeholder="sk-..." />
+  <button id="save-key">Save</button>
+  <button id="clear-key" class="secondary">Clear</button>
+  <p id="byok-status"></p>
+</section>
 
-    <section id="prefs" class="card">
-      <h2>Preferences</h2>
-      <div class="grid">
-        <label>Horizon days <input type="number" id="horizon" min="1" max="21" value="7"/></label>
-        <label>Working start <input type="time" id="start" value="09:00"/></label>
-        <label>Working end <input type="time" id="end" value="17:00"/></label>
-        <label>Min block (min) <input type="number" id="minBlock" value="25"/></label>
-        <label>Max block (min) <input type="number" id="maxBlock" value="90"/></label>
-        <label>Buffer (min) <input type="number" id="buffer" value="10"/></label>
-        <label>Max daily focus (min) <input type="number" id="maxDaily" value="240"/></label>
-      </div>
-      <button id="save-prefs">Save preferences</button>
-      <p id="prefs-status"></p>
-    </section>
+<section id="prefs" class="card">
+  <h2>Preferences</h2>
+  <div class="grid">
+    <label>Horizon days <input type="number" id="horizon" min="1" max="21" value="7"/></label>
+    <label>Working start <input type="time" id="start" value="09:00"/></label>
+    <label>Working end <input type="time" id="end" value="17:00"/></label>
+    <label>Min block (min) <input type="number" id="minBlock" value="25"/></label>
+    <label>Max block (min) <input type="number" id="maxBlock" value="90"/></label>
+    <label>Buffer (min) <input type="number" id="buffer" value="10"/></label>
+    <label>Max daily focus (min) <input type="number" id="maxDaily" value="240"/></label>
+  </div>
+  <button id="save-prefs">Save preferences</button>
+  <p id="prefs-status"></p>
+</section>
 
-    <section id="run" class="card">
-      <h2>Reshuffle</h2>
-      <button id="reshuffle-now">Reshuffle now</button>
-      <p id="run-status"></p>
-    </section>
-  </main>
+<section id="preview" class="card">
+  <div class="row">
+    <h2>Preview</h2>
+    <button id="refresh-preview" class="secondary">Refresh preview</button>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <h3>Google Tasks (incomplete)</h3>
+      <ul id="tasks-list" class="list"></ul>
+    </div>
+    <div class="column">
+      <h3>Upcoming calendar events</h3>
+      <ul id="events-list" class="list"></ul>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>Made with ❤️ — CalWeaver MVP</p>
-  </footer>
+<section id="run" class="card">
+  <h2>Reshuffle</h2>
+  <button id="reshuffle-now">Reshuffle now</button>
+  <p id="run-status"></p>
+</section>
+</main>
 
-  <script src="/app.js"></script>
-</body>
-</html>
+<footer> <p>Made with ❤️ — CalWeaver MVP</p> </footer>
+
+<script src="/app.js"></script> </body> </html>
