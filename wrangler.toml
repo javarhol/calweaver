@@ -7,7 +7,7 @@ OPENAI_API_BASE = "https://api.openai.com/v1"
 DEFAULT_MODEL = "gpt-4o-mini"
 
 [[d1_databases]]
-binding = "CalWeaverDB"
+binding = "DB"
 database_name = "CalWeaverDB"
 database_id = "825051f6-b7b9-4b73-80dc-3cc89f8c91c6"
 
